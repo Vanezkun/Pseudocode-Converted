@@ -7,6 +7,7 @@ Beberapa code yang dapat diubah :
 
 ```for i in range(0, 10, 1) :
     print(i)
-``` -> ```for i ← 0 to 10 step 1 do
+``` 
+-> ```for i ← 0 to 10 step 1 do
     write(i)
 endfor```
