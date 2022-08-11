@@ -41,14 +41,14 @@ function Convert(inputs, outputs){
         text[i] = text[i].replace('if ', 'if (')
         text[i] = text[i].replace(' :', '')
         text[i] = text[i].replace(':', '')
-        text[i] = text[i].replace('=', '←')
+        text[i] = text[i].replace(' = ', ' ← ')
         let inlinetab = (text[i].split('[tab]').length) -1
         
 
-        if(text[i].includes('if ')){ 
+        if(text[i].includes('if ') || text[i].includes('if(')){ 
             text[i] = text[i] + ') then' 
         }
-        if(text[i].includes('while ') || text[i].includes('for ')){ 
+        if(text[i].includes('while ') || text[i].includes('for ') || text[i].includes('while(') || text[i].includes('for(')){ 
             if(text[i].includes('(')){
                 text[i] = text[i] + ') do' 
             } else {
@@ -70,67 +70,58 @@ function Convert(inputs, outputs){
 
 
 // for loop, endfor
-        if(text[i].includes('for ') && text[i].includes('in range')){
+        // if(text[i].includes('for ') && text[i].includes('in range')){
 
-            let tabinlinefor = tabcount(text[i])
-
-
-            if(tabinlinefor == 0){
-                let endfordone = false
-                for(j=1;j<=totalline-1;j++){
-                    if(i+j+1 > totalline-1){ idanj = i+j; break }
-                    if(tabcount(text[i+j+1]) == 0){
-                        text[i+j] = text[i+j] + '\n' + 'endfor'
-                        endfordone = true
-                        totalline += 1
-                        break
-                    }
-                }
-                if(endfordone == false){
-                    text[totalline-1] = text[totalline-1] + '\n' + '[tab]'.repeat(0) +'endfor'
-                    totalline += 1
-                }
-            }
-
-            if(tabinlinefor > 0){
-                let endfordone = false
-                let idanj = 0
-                for(j=1;j<=totalline-1;j++){
-                    if(i+j+1 > totalline-1){ break }
-                    if(tabcount(text[i+j]) <= tabinlinefor){
-                        text[i+j] = text[i+j] + '\n' + '[tab]'.repeat(i+j) + 'endfor'
-                        endfordone = true
-                        totalline += 1
-                        break
-                    }
-                    idanj = i+j
-                }
-                if(endfordone == false){
-                    // if((text[totalline-1]).includes('endfor')){
-                    //     text[totalline-2] = text[totalline-2] + '\n' + '[tab]'.repeat(tabinlinefor) +'endforxx'
-                    //     totalline += 1
-
-                    // } else {
-                        text[totalline-1] = text[totalline-1] + '\n' + '[tab]'.repeat(tabinlinefor) +'endforx'
-                        totalline += 1
-                    // }
+        //     let tabinlinefor = tabcount(text[i])
 
 
+        //     if(tabinlinefor == 0){
+        //         let endfordone = false
+        //         for(j=1;j<=totalline-1;j++){
+        //             if(i+j+1 > totalline-1){ idanj = i+j; break }
+        //             if(tabcount(text[i+j+1]) == 0){
+        //                 text[i+j] = text[i+j] + '\n' + 'endfor'
+        //                 endfordone = true
+        //                 totalline += 1
+        //                 break
+        //             }
+        //         }
+        //         if(endfordone == false){
+        //             text[totalline-1] = text[totalline-1] + '\n' + '[tab]'.repeat(0) +'endfor'
+        //             totalline += 1
+        //         }
+        //     }
 
-                }
-            }
+        //     if(tabinlinefor > 0){
+        //         let endfordone = false
+        //         let idanj = 0
+        //         for(j=1;j<=totalline-1;j++){
+        //             if(i+j+1 > totalline-1){ break }
+        //             if(tabcount(text[i+j]) <= tabinlinefor){
+        //                 text[i+j] = text[i+j] + '\n' + '[tab]'.repeat(i+j) + 'endfor'
+        //                 endfordone = true
+        //                 totalline += 1
+        //                 break
+        //             }
+        //             idanj = i+j
+        //         }
+        //         if(endfordone == false){
+        //             // if((text[totalline-1]).includes('endfor')){
+        //             //     text[totalline-2] = text[totalline-2] + '\n' + '[tab]'.repeat(tabinlinefor) +'endforxx'
+        //             //     totalline += 1
+
+        //             // } else {
+        //                 text[totalline-1] = text[totalline-1] + '\n' + '[tab]'.repeat(tabinlinefor) +'endforx'
+        //                 totalline += 1
+        //             // }
 
 
 
+        //         }
+        //     }
 
 
-
-
-
-
-
-
-        }
+        // }
 
 
 
