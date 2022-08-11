@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Running a Python script</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        </head>
+    <body>
+        <br><br>
+        <input type="textbox" id="truekah" name="truekah" autofocus=""></textarea>
+        <br><br><br>
+
+        <textarea id="inputtext" name="inputtext" rows="6" cols="60" spellcheck="false" placeholder="Input Python Code ..." autofocus=""></textarea>
+        <br><br>
+
+        <button onClick="Convert(document.getElementsByName('inputtext')[0].value, document.getElementsByName('outputtext')[0].value)">Print</button>
+        <button onclick="Reset()">Clear Text</button>
+        <br><br>
+
+       
+        <textarea id="outputtext" name="outputtext" rows="6" cols="60" spellcheck="false" placeholder="Pseudocode Output ..." autofocus=""></textarea>
+        <br>
+
+
+
+        <!-- console log -->
+        <!-- <br><br>
+        <textarea id="consolelog" name="consolelog" rows="6" cols="60" spellcheck="false" autofocus=""></textarea>
+        <br>
+        <button onclick="clearconsole()">Clear Text</button>
+
+ -->
+
+
+
+
+
+
+
+
+
+
+        <script src="main.js"></script>
+
+    </body>
+</html>
