@@ -1,4 +1,4 @@
-# Pseudocode-Converted
+# Pseudocode-Converter
 Website for converting python code into pseudocode
 
 Prototype Website : https://website.fanestama03.repl.co/
