@@ -12,7 +12,7 @@ body {
     background-color: #ECECEC;
     font-size: 15px;
     padding: 10;
-    height: 350px;
+    height: 150px;
 }
 
 #consolelog{
@@ -20,4 +20,24 @@ body {
     height: 200px;
     color: white;
     padding: 10;
+}
+
+.container-left{
+    float: left;
+    width: 50%;
+
+}
+
+.container-right{
+    float: right;
+    width: 50%;
+
+}
+
+.example{
+    padding-top: 100px;
+}
+
+.description{
+    font-size: 20px;
 }
