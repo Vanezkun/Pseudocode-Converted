@@ -1,28 +1,60 @@
-<html>
-    <head>
-        <title>Running a Python script</title>
-        <link href="style.css" rel="stylesheet" type="text/css">
-        </head>
-    <body>
-        <br><br>
-        <input type="textbox" id="truekah" name="truekah" autofocus=""></textarea>
-        <br><br><br>
+<!DOCTYPE html>
+<html lang="id">
 
-        <textarea id="inputtext" name="inputtext" rows="6" cols="60" spellcheck="false" placeholder="Input Python Code ..." autofocus=""></textarea>
-        <br><br>
+<head>
+  <title>Converting Python into Pseudocode</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
 
-        <button onClick="Convert(document.getElementsByName('inputtext')[0].value, document.getElementsByName('outputtext')[0].value)">Print</button>
-        <button onclick="Reset()">Clear Text</button>
-        <br><br>
+<body>
+  <div class="container-left">
 
-       
-        <textarea id="outputtext" name="outputtext" rows="6" cols="60" spellcheck="false" placeholder="Pseudocode Output ..." autofocus=""></textarea>
-        <br>
+    <br><br>
+    <!-- <input type="textbox" id="truekah" name="truekah" autofocus=""></textarea>
+            <br><br><br> -->
+
+    <textarea id="inputtext" name="inputtext" rows="6" cols="30" spellcheck="false" placeholder="Input Python Code ..."
+      autofocus=""></textarea>
+    <br><br>
+
+    <button
+      onClick="Convert(document.getElementsByName('inputtext')[0].value, document.getElementsByName('outputtext')[0].value)">Convert</button>
+    <button onclick="Reset()">Clear Text</button>
 
 
 
-        <!-- console log -->
-        <!-- <br><br>
+
+
+    <br><br>
+
+
+    <textarea id="outputtext" name="outputtext" rows="6" cols="30" spellcheck="false"
+      placeholder="Pseudocode Output ..." autofocus=""></textarea>
+    <br>
+
+  </div>
+
+  <div class="container-right">
+    <img class="example" src="./src/example.png">
+    <br><br>
+    <span class="description">
+      Ini hanya prototype website <br>
+      Created by : Fanes Pratama <br><br>
+      <a href="https://github.com/Vanezkun/Pseudocode-Converted">
+        Github Repository
+      </a> <br><br>
+      To do list :
+      <li>Membuat endif, endfor, endwhile untuk tab lebih dari satu</li>
+      <li>Memfilter lebih untuk text yang terdeteksi seperti =</li>
+      <li>Memperindah tampilan website</li>
+
+
+    </span>
+  </div>
+
+
+  <!-- console log -->
+  <!-- <br><br>
         <textarea id="consolelog" name="consolelog" rows="6" cols="60" spellcheck="false" autofocus=""></textarea>
         <br>
         <button onclick="clearconsole()">Clear Text</button>
@@ -38,7 +70,8 @@
 
 
 
-        <script src="main.js"></script>
+  <script src="main.js"></script>
 
-    </body>
+</body>
+
 </html>
