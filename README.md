@@ -11,5 +11,5 @@ Beberapa code yang dapat diubah :
 - `while(x == 1):` -> `while(x == 1) do`
 - `x = [1, 5, 2 ,6]` -> `x ← [1, 5, 2 ,6]`
 
-Untuk endfor, endwhile, endif
-masih dalam pengembangan
+To do :
+- Tampilan web yang lebih baik
