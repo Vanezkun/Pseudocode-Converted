@@ -132,14 +132,21 @@ if(textnotab.startsWith('while ')||textnotab.startsWith('while(')&& textnotab.en
 
 //endif
 if(textnotab.startsWith('if ') || textnotab.startsWith('if(') && textnotab.endsWith('then')){
-        let elsecount = 0
+        let elifcount = 0
+        let tempinlinetab = inlinetab
         for(let j=1; j <= totalline-1; j++){
             if(tabcount(text[i+j]) <= inlinetab && text[i+j].length != 0){
-                if(text[i+j].replaceAll('[tab]', '').startsWith('elif')){
-                    elsecount++
-                } else if(!text[i+j].replaceAll('[tab]', '').startsWith('else')){
+                if(text[i+j].replaceAll('[tab]', '').startsWith('elif') && tempinlinetab == tabcount(text[i+j])){
+                    elifcount++
+                } else if(!(text[i+j].replaceAll('[tab]', '').startsWith('else'))){
                     text.splice(i+j, 0, '[tab]'.repeat(inlinetab) + 'endif')
-                    for(let k=0; k<=elsecount-1; k++){
+                    for(let k=0; k<=elifcount-1; k++){
+                        text.splice(i+j, 0, '[tab]'.repeat(inlinetab) + 'endif')
+                    }
+                    break
+                } else if((text[i+j].replaceAll('[tab]', '').startsWith('else')) && tempinlinetab > tabcount(text[i+j])){
+                    text.splice(i+j, 0, '[tab]'.repeat(inlinetab) + 'endif')
+                    for(let k=0; k<=elifcount-1; k++){
                         text.splice(i+j, 0, '[tab]'.repeat(inlinetab) + 'endif')
                     }
                     break
