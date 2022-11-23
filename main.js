@@ -1,6 +1,21 @@
 // document.getElementsByName('inputtext')[0].value = 'x = 2\ny = 3\nif x<0 :\n    print(x, "bil negatif")\nif(x >= y) :\n    print("x lebih besar dari y")\n    program = true\n    while program :\n        for i in range(10) :\n            print(i)\n    while (program) :\n        for i in range(5) :\n            print(tes)'
 // document.getElementsByName('inputtext')[0].value = "for i in range(0, 10, 1) :\n    print(i)\n    for i in range(0, 10, 1) :\n        print(i)\n        for i in range(0, 10, 1) :\n            print(i)"
 // document.getElementsByName('inputtext')[0].value = "if (x == 1) :\n    print('satu')\nelif (x == 2) :\n    print('dua')\nelse :\n    print('salah')\n"
+
+function buttonMouseover_left(){
+    document.getElementById("button-left").style = 'background-color: #008300;'
+}
+function buttonMouseout_left(){
+    document.getElementById("button-left").style = 'background-color: #00B012;'
+}
+function buttonMouseover_right(){
+    document.getElementById("button-right").style = 'background-color: #830000;'
+}
+function buttonMouseout_right(){
+    document.getElementById("button-right").style = 'background-color: #B00000;'
+}
+
+
 let text;
 let output = '';
 let truekah = '';
