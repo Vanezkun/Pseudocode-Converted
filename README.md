@@ -3,7 +3,7 @@ Website for converting python code into pseudocode
 
 Prototype Website : https://pseudocodeconverter.tfghfh.repl.co/
 
-Beberapa code yang dapat diubah : 
+Standarisasi converting :
 
 - `print('Hello world!')` -> `Write('Hello world!')`
 - `for i in range(0, 10, 1) :` -> `for i ← 0 to 10 step 1 do`
