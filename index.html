@@ -1,57 +1,106 @@
 <!DOCTYPE html>
 <html lang="id">
-    <head>
-        <title>Converting Python into Pseudocode</title>
-        <link href="style.css" rel="stylesheet" type="text/css">
-        </head>
-    <body>
-        <div class="container-left">
 
-            <!-- <br><br>
-            <input type="textbox" id="truekah" name="truekah" autofocus=""></input> -->
-            <br><br><br>
-            
-            <textarea id="inputtext" name="inputtext" rows="6" cols="30" spellcheck="false" placeholder="Input Python Code ..." autofocus=""></textarea>
-            <br><br>
-            
-            <button onClick="Convert(document.getElementsByName('inputtext')[0].value, document.getElementsByName('outputtext')[0].value)">Convert</button>
-            <button onclick="Reset()">Clear Text</button>
-            <br><br>
-            
-            
-            <textarea id="outputtext" name="outputtext" rows="6" cols="30" spellcheck="false" placeholder="Pseudocode Output ..." autofocus=""></textarea>
-            <br>
-            
-        </div>
+<head>
+  <title>Converting Python into Pseudocode</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
 
-        <div class="container-right">
-            <img class="example" src="./src/example.png">
-            <br><br>
-            <span class="description">
-                Ini hanya prototype website <br>
-                Created by : Fanes Pratama <br><br>
-                <a href="https://github.com/Vanezkun/Pseudocode-Converted">
-                    Github Repository
-                </a> <br><br>
-                To do list :
-                <li>Memperindah tampilan website</li>
+<body>
+  
+  <div class="container navbar">
+    <div class="navbar-text">
+      <b>Pseudocode Converter</b>
+    </div>
+  </div>
 
 
-            </span>
-        </div>
+  <div class="container-left">
+
+
+    <div class="textarea-wrapper">
+      <textarea id="inputtext" name="inputtext" spellcheck="false" placeholder="Input Python Code ..." autofocus="" ></textarea><br><br>
+
+      <button type="submit" id="button-left" class="button-left" onclick="Convert(document.getElementsByName('inputtext')[0].value, document.getElementsByName('outputtext')[0].value)" onmouseover="buttonMouseover_left()" onmouseout="buttonMouseout_left()">= Convert</button>
+      <button type="submit" id="button-right" class="button-right" onclick="reset()" onmouseover="buttonMouseover_right()" onmouseout="buttonMouseout_right()">x Reset</button>
+      <br>
+      <br>
+      
+      
+      <textarea id="outputtext" name="outputtext" spellcheck="false" placeholder="Pseudocode Output ..." autofocus="" style="background-color:#ECECEC ;"></textarea><br>
+    </div>
+
+  </div>
+
+
+  <div class="container-right">
+
+    <div class="container-subkanan1">
+      <div class="vertical-line"></div>
+    </div>
+
+    <div class="container-subkanan2">
+
+      <div class="right-navbar">Standarisasi Convert</div>
+      <div class="content-1">
+        <table>
+          <tr>
+            <td class="li-a"><span class="text-wrapper-a"> print("Hello world!")</td>
+              <td class="li-mid"> &nbsp;&#8594&nbsp;</td>
+              <td class="li-b"><span class="text-wrapper-b">Write("Hello world!")</td>
+              </tr>
+              <tr>
+                <td class="li-a"><span class="text-wrapper-a">for i in range(0, 10, 1) :</td>
+            <td class="li-mid"> &nbsp;&#8594&nbsp;</td>
+            <td class="li-b"><span class="text-wrapper-b">for i ← 0 to 10 step 1 do</td>
+          </tr>
+          <tr>
+            <td class="li-a"><span class="text-wrapper-a">if(x == 1) :</td>
+              <td class="li-mid"> &nbsp;&#8594&nbsp;</td>
+              <td class="li-b"><span class="text-wrapper-b">if(x == 1) then</td>
+              </tr>
+              <tr>
+                <td class="li-a"><span class="text-wrapper-a">x = [1, 5, 2, 6]</td>
+                  <td class="li-mid"> &nbsp;&#8594&nbsp;</td>
+                  <td class="li-b"><span class="text-wrapper-b">x ← [1, 5, 2, 6]</td>
+                  </tr>
+                  <tr>
+            <td class="li-a"><span class="text-wrapper-a">while(x == 1) :</td>
+              <td class="li-mid"> &nbsp;&#8594&nbsp;</td>
+              <td class="li-b"><span class="text-wrapper-b">while(x == 1) do</td>
+              </tr>
+              
+            </table>
+            <div class="right-navbar">Other</div>
+            <table>
+
+              <tr>
+                <td class="li-a">
+                  <span class="text-wrapper-c">
+                    <img src="./src/github.png" style="width: 1.2vw; padding-left: 0.5vw;">
+                    <a href="https://github.com/Vanezkun/Pseudocode-Converter/" style="text-decoration:none">&nbsp;Github</a>
+                  </span>
+                </td>
+               </tr>
+              <tr>
+                <td class="li-a">
+                  <span class="text-wrapper-c">
+                    <img src="./src/Statistika.png" style="width: 2.1vw;">
+                    <a href="https://statistikahelper.tfghfh.repl.co/" style="text-decoration:none">Statistika Helper</a>
+                  </span>
+                </td>
+              </tr>
+            </table>
+      </div>
+    </div>
+  </div>
 
 
 
 
 
+  <script src="main.js"></script>
 
+</body>
 
-
-
-
-        <br><br><br><br><br><br><br><br><br><br><br><br>
-
-        <script src="main.js"></script>
-
-    </body>
 </html>
