@@ -1,7 +1,3 @@
-/* body {
-
-} */
-
 .navbar {
     width: 100%;
     height: 5vw;
@@ -18,7 +14,6 @@
     margin-top: 0.4vw;
     font-size: 2vw;
 }
-
 
 .container-left{
     float: left;
@@ -73,7 +68,6 @@ button.button-right {
     height: 37vw;
 }
 
-
 .container-right{
     float: right;
     width: 50%;
@@ -102,7 +96,6 @@ button.button-right {
     width: 30vw;
 }
 
-
 td.li-a, td.li-b{
     padding-top: 0.55vw;
     padding-bottom: 0.55vw;
@@ -115,6 +108,11 @@ table{
 td.li-b{
     text-align: left;
     padding-left: 1rem;
+}
+
+td.li-mid{
+    font-size: 1.5vw;
+
 }
 
 
@@ -133,4 +131,75 @@ span{
 
 .text-wrapper-c{
     background-color: rgba(203, 192, 178, 0.197);
+}
+
+@media only screen and (max-width: 600px) {
+
+
+
+    .container-right{
+        float: none;
+        padding-left: 0vw;
+    }
+
+    .container-left{
+        float: none;
+        padding-left: 0vw;
+        margin-bottom: -5vw;
+        width: auto;
+    }
+
+    .vertical-line{
+        border-left: 0px solid rgba(95, 88, 79, 0.644);
+    }
+
+    .textarea-wrapper{
+        width: 70%;
+        margin-top: 1vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    textarea{
+        font-size: 12px;
+        height: 35vw;
+        width: 100%;
+        resize: vertical;
+        border-radius: 5px;
+    }
+
+    .container-subkanan2{
+        margin-left: 15%;
+    }
+    
+    .right-navbar{
+        margin-bottom: 0.5vw;
+        background-color: rgba(173, 173, 173, 0.637);
+        padding: 2vw;
+        font-size: 4.5vw;
+        width: 75vw;
+        margin-top: 3vw;
+    }
+    
+    td.li-a, td.li-b{
+        padding-top: 0.55vw;
+        padding-bottom: 0.55vw;
+    }
+    
+    table{
+        width: 80vw;
+    }
+
+    td.li-b{
+        text-align: left;
+        padding-left: 1rem;
+    }
+    
+    span{
+        border-radius: 5px;
+        padding: 0.3rem;
+        font-size: 3vw;
+    }
+
+
 }
