@@ -1,7 +1,7 @@
 # Pseudocode-Converter
 Website for converting python code into pseudocode
 
-Prototype Website : [bit.ly/pseudocodeconverter](https://pseudocode-converter.vanezkun.repl.co)
+Website : [fanes.site](https://fanes.site)
 
 Standarisasi converting :
 
